@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'variables';
+@import 'mixins';
 
 *,
 *:after,
@@ -9,6 +10,7 @@
    padding: 0;
    border: none;
    box-sizing: border-box;
+   @include default-font-family;
 }
 
 html, body {

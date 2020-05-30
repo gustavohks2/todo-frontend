@@ -1,16 +1,15 @@
 @import 'variables';
 
-// .todolist {
-//    width: 515px;
-//    height: 456px;
-//    display: flex;
-//    flex-direction: column;
-//    background: rgba(248, 248, 248, 0.54);
-//    border-radius: $default-border-radius;
-// }
+.todolist {
+   width: 515px;
+   height: 456px;
+   display: flex;
+   flex-direction: column;
+   background: rgba(248, 248, 248, 0.54);
+   border-radius: $default-border-radius;
+}
 
-// .todolist__task-item {
-//    list-style: none;
-//    background-color: red;
-//    height: 20px;
-// }  
+.todolist__task-item {
+   list-style: none;
+   height: 57px;
+}  
