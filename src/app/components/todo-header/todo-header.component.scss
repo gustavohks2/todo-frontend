@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.options-container {
+   width: 100%;
+   height: 100%;
+   font-family: "Roboto";
+
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.options {
+   &__settings {
+      display: flex;
+      align-items: center;
+
+      .settings-text {
+         cursor: pointer;
+
+         font-size: 17px;
+         color: #676767;
+      }
+
+      .icon-angle-up {
+         cursor: pointer;
+         
+         width: 22px;
+         height: 15px;
+         margin-right: .7rem;
+
+         background-repeat: no-repeat;
+         background-image: url("../../../assets/img/icons/icon-angle.svg");
+      }
+   }
+}
+
+.options__current-todo-list {
+   margin: 0 6rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   .icon-status {
+      display: block;
+      width: 7px;
+      height: 7px;
+      background-color: #FF9A76;
+      border-radius: 100%;
+   }
+
+   .current-todo-list-text {
+      cursor: pointer;
+      font-size: 20px;
+      color: #494949;
+
+      margin: 0 13px;
+   }
+
+   .icon-caret-down {   
+      color: #C4C4C4;
+      cursor: pointer;
+   }
+}
+
+.icon-add-new-todo-item {
+   cursor: pointer;
+   
+   color: #d1d1d1;
+   font-family: "Roboto";
+   font-size: 30px;
+
+   width: 34px;
+   height: 34px;
+   border-radius: 50%;
+   border: 2px solid #d1d1d1;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+   .plus-character {
+      font-style: normal;
+   }
+}
