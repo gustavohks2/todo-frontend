@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'todo-task-item',
-  templateUrl: './task-item.component.html',
-  styleUrls: ['./task-item.component.scss']
+   selector: 'todo-task-item',
+   templateUrl: './task-item.component.html',
+   styleUrls: ['./task-item.component.scss']
 })
-export class TaskItemComponent implements OnInit {
+export class TaskItemComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+   @Input() task: any;
 
 }

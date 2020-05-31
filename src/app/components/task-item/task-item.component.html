@@ -1,6 +1,6 @@
 <label class="custom-checkbox__container" for="cbx">
-   <input class="custom-checkbox__native-checkbox" id="cbx" type="checkbox"/>
+   <input class="custom-checkbox__native-checkbox" id="cbx" type="checkbox" [checked]="task.finished"/>
    <span class="custom-checkbox__checkbox"></span>
 </label>
 
-<label for="cbx">Go for a walk</label>
+<label class="todo-task-name" for="cbx">{{ task.description }}</label>
