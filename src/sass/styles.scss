@@ -10,7 +10,6 @@
    padding: 0;
    border: none;
    box-sizing: border-box;
-   @include default-font-family;
 }
 
 html, body {
@@ -61,4 +60,12 @@ html, body {
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+.rippe-circle {
+   width: 20px;
+   height: 20px;
+   position: absolute;
+   background-color: red;
+   border-radius: 50%;
 }

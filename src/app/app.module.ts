@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { TodoHeaderComponent } from './components/todo-header/todo-header.component';
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
+import { RippleEffectDirective } from './shared/ripple-effect/ripple-effect.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoHeaderComponent,
     TodolistComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    RippleEffectDirective
   ],
   imports: [
     BrowserModule

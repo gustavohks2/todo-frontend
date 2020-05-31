@@ -1,6 +1,6 @@
-<div class="todolist">
-   <div class="todolist__task-item" *ngFor="let fakeTodoTask of todoTasksFakeData">
+<ul class="todolist">
+   <li class="todolist__task-item" *ngFor="let fakeTodoTask of todoTasksFakeData">
       <todo-task-item [task]="fakeTodoTask">
       </todo-task-item>
-   </div>
-</div>
+   </li>
+</ul>
