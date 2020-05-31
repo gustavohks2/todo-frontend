@@ -1,5 +1,5 @@
-<label class="custom-checkbox__container" for="cbx">
-   <input class="custom-checkbox__native-checkbox" id="cbx" type="checkbox" [checked]="task.finished"/>
+<label class="custom-checkbox__container" [for]="checkboxId">
+   <input class="custom-checkbox__native-checkbox" [id]="checkboxId" type="checkbox" [checked]="task.finished"/>
    <span class="custom-checkbox__checkbox"></span>
 </label>
 

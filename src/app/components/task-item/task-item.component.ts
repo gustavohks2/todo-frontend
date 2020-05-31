@@ -9,4 +9,7 @@ export class TaskItemComponent {
 
    @Input() task: any;
 
+   public get checkboxId() {
+      return `cbx${this.task.id}`;
+   }
 }
