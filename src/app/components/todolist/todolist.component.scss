@@ -13,4 +13,8 @@
    list-style: none;
    height: 57px;
    overflow: hidden;
+
+   &:not(:last-child) {
+      border-bottom: 1px solid hsla(0, 0%, 91%, 0.226);
+   }
 }  
