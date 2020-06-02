@@ -2,23 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { TodoHeaderComponent } from './components/todo-header/todo-header.component';
-import { TodolistComponent } from './components/todolist/todolist.component';
-import { TaskItemComponent } from './components/task-item/task-item.component';
-import { RippleEffectDirective } from './shared/ripple-effect/ripple-effect.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
+import { TodoModule } from './modules/todo/todo.module';
 
 @NgModule({
    declarations: [
-      AppComponent,
-      TodoHeaderComponent,
-      TodolistComponent,
-      TaskItemComponent,
-      RippleEffectDirective
+      AppComponent
    ],
    imports: [
       BrowserModule,
-      HttpClientModule
+      HttpClientModule,
+      TodoModule,
+      SharedModule
    ],
    providers: [],
    bootstrap: [AppComponent]
