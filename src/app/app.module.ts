@@ -6,19 +6,21 @@ import { TodoHeaderComponent } from './components/todo-header/todo-header.compon
 import { TodolistComponent } from './components/todolist/todolist.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { RippleEffectDirective } from './shared/ripple-effect/ripple-effect.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TodoHeaderComponent,
-    TodolistComponent,
-    TaskItemComponent,
-    RippleEffectDirective
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      TodoHeaderComponent,
+      TodolistComponent,
+      TaskItemComponent,
+      RippleEffectDirective
+   ],
+   imports: [
+      BrowserModule,
+      HttpClientModule
+   ],
+   providers: [],
+   bootstrap: [AppComponent]
 })
 export class AppModule { }

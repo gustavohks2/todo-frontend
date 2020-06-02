@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TaskService } from 'src/app/services/task.service';
+import { Task } from 'src/app/models/task';
 
 @Component({
    selector: 'todo-todolist',
@@ -7,8 +9,13 @@ import { Component } from '@angular/core';
 })
 export class TodolistComponent {
 
+   tasks: Task[];
+
+   constructor(private taskService: TaskService) {
+      this.updateTasks();
+   }
+
    public todoTasksFakeData: any = [
-      { id: 1, finished: false, description: 'Go for a walk' },
       { id: 2, finished: false, description: 'Eat an apple at eleven o’clock for dinner' },
       { id: 3, finished: false, description: 'Take the dog out for a walk at the park tommorrow' },
       { id: 4, finished: true, description: 'Make plans for the weekend' },
@@ -18,4 +25,9 @@ export class TodolistComponent {
       { id: 8, finished: false, description: 'Go shop at the supermarket, ‘cause there’s no food' },
    ];
 
+
+   private updateTasks() {
+      this.taskService.getAllTasks()
+         .subscribe(tasks => this.tasks = tasks.concat(this.todoTasksFakeData));
+   }
 }
