@@ -1,4 +1,5 @@
 @import "mixins";
+$checkbox-base-color: #fd96a4;
 
 :host {
    display: flex;
@@ -8,8 +9,6 @@
    padding: 0 25px;
    @include default-font-family;
 }
-
-$checkbox-base-color: #fd96a4;
 
 .custom-checkbox {
 
@@ -33,7 +32,6 @@ $checkbox-base-color: #fd96a4;
       display: block;
       border: 1px solid $checkbox-base-color;
 
-      background-image: url("../../../../assets/img/icons/icon-checkmark.svg");
       background-repeat: no-repeat;
       background-size: 10px 10px;
       background-position: center center;
@@ -42,6 +40,7 @@ $checkbox-base-color: #fd96a4;
    }
 
    &__native-checkbox:checked + &__checkbox {
+      background-image: url("../../../../assets/img/icons/icon-checkmark.svg");
       background-color: $checkbox-base-color;
    }
 }
