@@ -7,18 +7,20 @@ $button-add-todo-group-size: 62px;
    &__add-todo-group-button {
       display: flex;
       align-items: center;
-      font-weight: 200;
       justify-content: center;
       
       appearance: none;
       border: none;
-
-      color: $color-secondary;
-      font-size: 64px;
       
       background-color: $color-white;
       width: $button-add-todo-group-size;
       height: $button-add-todo-group-size;
+
+      .plus-icon {
+         color: $color-secondary;
+         font-size: 64px;
+         font-style: normal;
+      }
    }
 
    &__list {
@@ -26,3 +28,4 @@ $button-add-todo-group-size: 62px;
    }
 
 }
+
