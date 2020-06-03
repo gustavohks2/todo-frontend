@@ -2,6 +2,7 @@
 
 $button-add-todo-group-size: 62px;
 $task-groups-container-amount: 5;
+$task-group-list-item-height: 71px;
 
 :host {
    width: 287px;
@@ -18,7 +19,7 @@ $task-groups-container-amount: 5;
       align-items: center;
       justify-content: center;
       
-      font-family: 'Roboto', sans-serif;
+      @include default-font-family;
       font-weight: 100;
       
       background-color: $color-white;
@@ -33,11 +34,17 @@ $task-groups-container-amount: 5;
 
    &__list {
       width: 100%;
-      height: calc(71px * #{ $task-groups-container-amount });
-      margin-top: 36px;
+      height: calc(#{$task-group-list-item-height} * #{ $task-groups-container-amount });
+      margin-top: 46px;
       list-style: none;
       list-style-type: none;
    }
    
+}
+
+.todo-task-group-list {
+   &__item {
+      height: $task-group-list-item-height;
+   }
 }
 

@@ -30,6 +30,10 @@ button > * {
    text-decoration: none;
 }
 
+.flex {
+   display: flex;
+}
+
 .main-background {
    position: relative;
    background-color: $color-primary;
