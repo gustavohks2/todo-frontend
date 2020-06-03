@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
       <main class="main-centered-container">
          <section class="todo-task-group-container">
             <todo-task-group></todo-task-group>
-            <todo-settings-button></todo-settings-button>
+            <div class="todo-settings-button-container">
+               <todo-settings-button></todo-settings-button>
+            </div>
          </section>
          <section class="todolist-and-settings-container">
             <header class="todo-header">

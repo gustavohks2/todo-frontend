@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 *,
 *:after,
@@ -12,9 +12,22 @@
    box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
    width: 100vw;
    height: 100vh;
+}
+
+button,
+input[type="button"],
+button > * {
+   cursor: pointer;
+   border: none;
+   padding: none;
+   margin: none;
+   font-family: "Roboto", sans-serif;
+   appearance: none;
+   text-decoration: none;
 }
 
 .main-background {
@@ -40,9 +53,16 @@ html, body {
 .todo-task-group-container {
    width: 354px;
    height: 100%;
-   background: linear-gradient(180deg, #F96D80 1.26%, #BB596B 101.26%);
+   background: linear-gradient(180deg, #f96d80 1.26%, #bb596b 101.26%);
    display: flex;
    flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   padding: 47px 0;
+
+   .todo-settings-button-container {
+      width: 265px;
+   }
 }
 
 .todolist-and-settings-container {
@@ -53,7 +73,7 @@ html, body {
 .todo-header {
    width: 100%;
    height: 80px;
-   background: linear-gradient(90deg, #ECECEC -1.01%, rgba(255, 255, 255, 0) 7.11%);
+   background: linear-gradient(90deg, #ececec -1.01%, rgba(255, 255, 255, 0) 7.11%);
 }
 
 .todolist-container {

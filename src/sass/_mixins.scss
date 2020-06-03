@@ -1,6 +1,10 @@
+@mixin equal-dimensions($size) {
+   width: $size;
+   height: $size;
+}
+
 @mixin circle-shape($diameter-size) {
-   width: $diameter-size;
-   height: $diameter-size;
+   @include equal-dimensions($diameter-size);
    border-radius: 50%;
 }
 
