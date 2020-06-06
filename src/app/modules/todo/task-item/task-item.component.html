@@ -3,4 +3,8 @@
    <span class="custom-checkbox__checkbox"></span>
 </label>
 
-<label class="todo-task-name" [for]="checkboxId">{{ task.description }}</label>
+<label 
+   class="todo-task-name" 
+   [ngStyle]="{'text-decoration': task.finished ? 'line-through': 'none' }" 
+   [for]="checkboxId">{{ task.description }}
+</label>

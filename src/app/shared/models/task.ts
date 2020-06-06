@@ -1,7 +1,8 @@
 export class Task {
    id: number;
    description: string;
-   creationDate: Date;
+   creationDateTime: Date;
    finished: boolean;
    active: boolean;
+   groupId: number;
 }
