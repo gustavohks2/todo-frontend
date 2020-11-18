@@ -30,7 +30,7 @@ export class TodolistComponent {
    private updateTasks() {
       this.taskService.getAllTasks()
          .subscribe(
-            tasks => this.tasks = this.todoTasksFakeData,
+            tasks => this.tasks = tasks,
             err => this.tasks = this.todoTasksFakeData);
    }
 }

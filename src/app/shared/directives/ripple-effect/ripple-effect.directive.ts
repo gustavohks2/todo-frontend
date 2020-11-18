@@ -16,7 +16,7 @@ export class RippleEffectDirective {
 
       let rippleCircle: HTMLSpanElement = this.container.querySelector('.rippe-circle');
 
-      console.log(this.container);
+      // console.log(this.container);
       this.max = Math.max(this.container.offsetWidth, this.container.offsetHeight);
 
       if (!rippleCircle) {
