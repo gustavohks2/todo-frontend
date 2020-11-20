@@ -1,8 +1,9 @@
 @import "mixins";
+@import 'variables';
 
 $checkbox-base-color: #fd96a4;
 
-:host {
+.task-item-container {
    display: flex;
    align-items: center;
    width: 100%;
@@ -49,4 +50,20 @@ $checkbox-base-color: #fd96a4;
 .todo-task-name {
    color: #9A9A9A;
    font-size: 14px;
+}
+
+.editable-text {
+   background-color: transparent;
+   border: none;
+   outline: none;
+   width: 100%;
+}
+
+.todo-task-name, .editable-text {
+   @include default-font-family;
+}
+
+.editable-text:focus {
+   border: none;
+   outline: none;
 }

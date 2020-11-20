@@ -1,10 +1,22 @@
-<label class="custom-checkbox__container" [for]="checkboxId">
-   <input class="custom-checkbox__native-checkbox" [id]="checkboxId" type="checkbox" [checked]="task.finished"/>
-   <span class="custom-checkbox__checkbox"></span>
-</label>
+<div class="task-item-container">
+   <label class="custom-checkbox__container" [for]="checkboxId">
+      <input class="custom-checkbox__native-checkbox" 
+         (click)="markTaskAsFinished()" [id]="checkboxId" 
+         type="checkbox" [checked]="task.finished"/>
+         
+      <span class="custom-checkbox__checkbox"></span>
+   </label>
+   
+   <label *ngIf="!task.isTemp; else unsavedTask"
+      class="todo-task-name" 
+      [ngStyle]="{'text-decoration': task.finished ? 'line-through': 'none' }" 
+      [for]="checkboxId">{{ task.description }}
+   </label>
 
-<label 
-   class="todo-task-name" 
-   [ngStyle]="{'text-decoration': task.finished ? 'line-through': 'none' }" 
-   [for]="checkboxId">{{ task.description }}
-</label>
+   <ng-template #unsavedTask>
+      <input 
+         #inTempTask class="todo-task-name editable-text" 
+         type="text" (blur)="notifyInputTaskWasBlurred()"
+         [(ngModel)]="task.description"/>
+   </ng-template>
+</div>

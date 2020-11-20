@@ -9,6 +9,7 @@ import { Task } from 'src/app/shared/models/task';
 })
 export class TodolistComponent {
 
+   private readonly UNSAVED_TASK_DEFAULT_ID = 0;
    tasks: Task[];
 
    constructor(private taskService: TaskService) {
@@ -26,11 +27,22 @@ export class TodolistComponent {
       { id: 8, finished: false, description: 'Go shopping at the supermarket, ‘cause there’s no food' },
    ];
 
+   public createNewTask(): void {
+      if (!this.tasks.some(task => task.id === this.UNSAVED_TASK_DEFAULT_ID)) {
+         this.tasks.push({ id: 0, finished: false, description: '', isTemp: true } as Task);
+      }
+   }
 
    private updateTasks() {
       this.taskService.getAllTasks()
          .subscribe(
             tasks => this.tasks = tasks,
             err => this.tasks = this.todoTasksFakeData);
+   }
+
+   public deleteTempTaskIfInvalid(tempTask: Task): void {
+      if (tempTask.description.trim().length === 0) {
+         this.tasks =  this.tasks.filter(task => task.id !== this.UNSAVED_TASK_DEFAULT_ID);
+      }
    }
 }

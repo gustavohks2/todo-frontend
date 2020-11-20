@@ -5,6 +5,7 @@ import { TaskItemComponent } from './task-item/task-item.component';
 import { TodoHeaderComponent } from './todo-header/todo-header.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { TaskGroupListItemComponent } from './task-group/task-group-list-item/task-group-list-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
    declarations: [
@@ -15,7 +16,8 @@ import { TaskGroupListItemComponent } from './task-group/task-group-list-item/ta
       TaskGroupListItemComponent
    ],
    imports: [
-      CommonModule
+      CommonModule,
+      FormsModule
    ],
    exports: [
       TaskGroupComponent,
