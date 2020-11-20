@@ -19,4 +19,10 @@
          type="text" (blur)="notifyInputTaskWasBlurred()"
          [(ngModel)]="task.description"/>
    </ng-template>
+
+   <div (click)="openTaskItemMenuOptions()" class="task-item__menu">
+      <span></span>
+      <span></span>
+      <span></span>
+   </div>
 </div>

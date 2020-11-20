@@ -27,4 +27,8 @@ export class TaskItemComponent implements AfterViewInit {
    public markTaskAsFinished = () => {
       this.task.finished = !this.task.finished;
    }
+
+   public openTaskItemMenuOptions(): void {
+
+   }
 }
