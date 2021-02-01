@@ -1,6 +1,6 @@
 <ul class="todolist">
    <li class="todolist__task-item" *ngFor="let task of tasks">
-      <todo-task-item [task]="task" (blurredTempTaskInput)="deleteTempTaskIfInvalid($event)">
+      <todo-task-item [task]="task" (blurredTempTaskInput)="saveOrDeleteTempTask($event)">
       </todo-task-item>
    </li>
 </ul>

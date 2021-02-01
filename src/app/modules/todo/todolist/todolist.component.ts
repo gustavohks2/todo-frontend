@@ -40,9 +40,28 @@ export class TodolistComponent {
             err => this.tasks = this.todoTasksFakeData);
    }
 
-   public deleteTempTaskIfInvalid(tempTask: Task): void {
-      if (tempTask.description.trim().length === 0) {
-         this.tasks =  this.tasks.filter(task => task.id !== this.UNSAVED_TASK_DEFAULT_ID);
-      }
+   private isTempTaskDescriptionValid(tempTask: Task): boolean {
+      return tempTask.description.trim().length > 0;
+   }
+
+   private saveTempTask(tempTask: Task) {
+      this.taskService.saveTask(tempTask)
+         .subscribe(
+            task => {
+               this.deleteTempTask();
+               this.tasks.push(task);
+            },
+            err => console.log(err));
+   }
+
+   private deleteTempTask() {
+      this.tasks = this.tasks.filter(task => task.id !== this.UNSAVED_TASK_DEFAULT_ID);
+   }
+
+   public saveOrDeleteTempTask(tempTask: Task): void {
+      if (!this.isTempTaskDescriptionValid(tempTask)) {
+         return this.deleteTempTask();
+      }  
+      this.saveTempTask(tempTask);
    }
 }
